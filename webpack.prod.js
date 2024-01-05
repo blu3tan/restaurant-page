@@ -1,22 +1,11 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const basic = require("./webpack.basic");
+const { merge } = require('webpack-merge');
 
-module.exports = {
-    entry: "./src/index.js",
+module.exports = merge(basic, {
+    mode: "production",
     output: {
-        filename: "main.[contenthash].js",
-        path: path.resolve(__dirname, "dist")
-    },
-    plugins: [new HtmlWebpackPlugin({
-        template:"./src/template.html"
-    })
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"]
-            }
-        ],
-    },
-}
+      filename: "main.[contenthash].js",
+      path: path.resolve(__dirname, "dist")
+    }
+  });
