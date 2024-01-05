@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@200;400;700;900&display=swap');
+
+:root {
+    --border: solid 5px black;
+    --border-radius: 1.5rem;
+    --text: black;
+    --nav: hsl(46, 88%, 57%);
+    --nav-highlight: #ffe942;
+    --background: hsl(19, 91%, 50%);
+}
+
+/*************** General reset ***************/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Asap', sans-serif;
+    user-select: none;
+    color: black;
+    
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+/*************** Page layout ***************/
+
+.content {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: var(--background);
+}
+.page-layout {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 4fr;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+.page-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr 4fr;
+    background-color: var(--nav);
+}
+
+.page-nav > *{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-inline: 2rem;
+    border-bottom: var(--border);
+    border-right: var(--border);
+    cursor: pointer;
+}
+.page-nav .nav-hours{
+    border-bottom: 0;
+    cursor:default;
+}
+
+div.nav {
+    padding-inline: 3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-logo {
+    transition: all 0.2s ease-in-out;
+}
+
+div.nav:hover,
+.nav-logo:hover {
+    background-color: var(--nav-highlight);
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(/assets/restaurant-interior); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.kato-big {
+    scale: 1.2;
+}
