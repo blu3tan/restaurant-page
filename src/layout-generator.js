@@ -1,3 +1,7 @@
+import katoImg from "./assets/kato.png";
+import katoBigImg from "./assets/kato-big.png";
+import boardImg from "./assets/board.png";
+
 
 export function layoutGenerator() {
     const content = document.getElementById('content');
@@ -18,13 +22,13 @@ export function layoutGenerator() {
     pageContent.classList.add('page-content');
 
     const logo = document.createElement('img');
-    logo.src = '/assets/kato.png';
+    logo.src = katoImg;
 
     const board = document.createElement('img');
-    board.src = '/assets/board.png';
+    board.src = boardImg;
 
     const katoBig = document.createElement('img');
-    katoBig.src = '/assets/kato-big.png';
+    katoBig.src = katoBigImg;
 
     const menuLink = document.createElement('h2');
     menuLink.textContent = 'MENU';
@@ -34,6 +38,7 @@ export function layoutGenerator() {
 
     content.append(pageLayout);
     pageLayout.appendChild(pageNav);
+    pageLayout.appendChild(pageContent);
     pageNav.append(navLogo, navMenu, navContact, navHours);
     navLogo.appendChild(logo);
     navMenu.appendChild(menuLink);

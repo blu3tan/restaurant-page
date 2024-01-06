@@ -101,7 +101,7 @@ div.nav:hover,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-image: url(/assets/restaurant-interior); */
+    background-image: url(./assets/restaurant-interior.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
