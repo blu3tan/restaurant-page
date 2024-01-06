@@ -71,15 +71,15 @@ h2 {
 .page-nav > *{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    padding-inline: 2rem;
     border-bottom: var(--border);
     border-right: var(--border);
     cursor: pointer;
 }
 .page-nav .nav-hours{
     border-bottom: 0;
+    padding-inline: 2rem;
     cursor:default;
+    justify-content: center;
 }
 
 div.nav {
@@ -88,7 +88,15 @@ div.nav {
 }
 
 .nav-logo {
+    justify-content: center;
     transition: all 0.2s ease-in-out;
+}
+
+object.katoAnimation {
+    transform: scale(0.9);
+}
+object.boardAnimation {
+    transform: scale(0.9);
 }
 
 div.nav:hover,

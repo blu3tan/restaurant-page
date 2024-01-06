@@ -1,6 +1,6 @@
-import katoImg from "./assets/kato.png";
 import katoBigImg from "./assets/kato-big.png";
-import boardImg from "./assets/board.png";
+import boardSvg from "./assets/sushi-board-anim.svg";
+import katoSvg from "./assets/sushi-kato-anim.svg";
 
 
 export function layoutGenerator() {
@@ -21,11 +21,15 @@ export function layoutGenerator() {
     navHours.classList.add('nav-hours');
     pageContent.classList.add('page-content');
 
-    const logo = document.createElement('img');
-    logo.src = katoImg;
+    const logo = document.createElement('object');
+    logo.type = 'image/svg+xml';
+    logo.data = katoSvg;
+    logo.classList.add('katoAnimation');
 
-    const board = document.createElement('img');
-    board.src = boardImg;
+    const board = document.createElement('object');
+    board.type = 'image/svg+xml';
+    board.data = boardSvg;
+    board.classList.add('boardAnimation');
 
     const katoBig = document.createElement('img');
     katoBig.src = katoBigImg;
