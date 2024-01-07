@@ -114,14 +114,15 @@ div.nav {
 .nav-logo {
     justify-content: center;
     transition: all 0.2s ease-in-out;
+    padding-inline: 1.5rem;
 }
 
 object.katoAnimation {
     max-width: 100%;
-    padding-inline: 1rem;
+    /* padding-inline: 1rem; */
 }
 object.boardAnimation {
-    max-width: 100%;
+    max-width: 90%;
 }
 
 div.nav:hover,
@@ -155,6 +156,7 @@ div.nav:hover,
 .menuContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     position: absolute;
     transform: translateX(-100dvw);
     overflow: hidden;
@@ -172,12 +174,25 @@ div.nav:hover,
 }
 
 .menuContainer > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
 }
 
 .menuContainer .menuItem:hover {
         background-color: var(--nav-highlight);
+}
+
+object.logoNigiri,
+object.logoRice,
+object.logoSquid,
+object.logoRamen {
+    transform: scale(0.8);
 }
 
 .nigiri {
