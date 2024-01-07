@@ -2,9 +2,12 @@
 
 :root {
     --border: solid 5px black;
-    --border-radius: 1.5rem;
+    --border-inside: solid 2.5px black;
+    --border-radius: 1rem;
+    --border-radius-inside: 0.75rem;
     --text: black;
     --nav: hsl(46, 88%, 57%);
+    --nav-transparent: hsla(46, 88%, 57%, 0.75);
     --nav-highlight: #ffe942;
     --background: hsl(19, 91%, 50%);
 }
@@ -39,7 +42,27 @@ h2 {
     font-size: 2rem;
 }
 
-/*************** Page layout ***************/
+/************************* Animations *************************/
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/************************* UI and navigation layout *************************/
 
 .content {
     height: 100dvh;
@@ -58,6 +81,7 @@ h2 {
     border-radius: var(--border-radius);
     overflow: hidden;
     background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 }
 
@@ -93,10 +117,11 @@ div.nav {
 }
 
 object.katoAnimation {
-    transform: scale(0.9);
+    max-width: 100%;
+    padding-inline: 1rem;
 }
 object.boardAnimation {
-    transform: scale(0.9);
+    max-width: 100%;
 }
 
 div.nav:hover,
@@ -104,7 +129,10 @@ div.nav:hover,
     background-color: var(--nav-highlight);
 }
 
+/************************* Changing section *************************/
+
 .page-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,3 +146,56 @@ div.nav:hover,
 .kato-big {
     scale: 1.2;
 }
+.kato-big.fade {
+    animation: fade-out 0.3s forwards;
+}
+
+/************************* Menu page *************************/
+
+.menuContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    transform: translateX(-100dvw);
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    border: var(--border-inside);
+    border-radius: var(--border-radius);
+    background-color: var(--nav-transparent);
+    transition: transform 300ms ease-in-out;
+}
+
+.menuContainer.slide {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+.menuContainer > * {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.menuContainer .menuItem:hover {
+        background-color: var(--nav-highlight);
+}
+
+.nigiri {
+    border-top-left-radius: var(--border-radius-inside);
+    border: var(--border-inside);
+}
+
+.noodles {
+    border-top-right-radius: var(--border-radius-inside);
+    border: var(--border-inside);
+}
+
+.squid {
+    border-bottom-left-radius: var(--border-radius-inside);
+    border: var(--border-inside);
+}
+.rice {
+    border-bottom-right-radius: var(--border-radius-inside);
+    border: var(--border-inside);
+}
+

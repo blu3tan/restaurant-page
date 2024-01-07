@@ -32,6 +32,7 @@ export function layoutGenerator() {
     board.classList.add('boardAnimation');
 
     const katoBig = document.createElement('img');
+    katoBig.classList.add('kato-big');
     katoBig.src = katoBigImg;
 
     const menuLink = document.createElement('h2');
