@@ -1,7 +1,6 @@
 import katoBigImg from "./assets/kato-big.png";
 
 export function homePageGenerator() {
-    
     const pageContent = document.querySelector('.page-content');
     const homeContainer = document.createElement('div');
     homeContainer.classList.add('home-container');

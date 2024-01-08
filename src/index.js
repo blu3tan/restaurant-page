@@ -4,24 +4,41 @@ import { removePage } from "./remove-page";
 import { homePageGenerator } from "./home-page-content";
 import "./main.css";
 
-function navigation() {
+let pageActive = 'home'
+
+function startPage() {
+    layoutGenerator();
+    homePageGenerator();
     const navMenu = document.querySelector('.nav-menu');
-    navMenu.addEventListener('click', menuPageGenerator);
-}
+    navMenu.addEventListener('click', () =>{
+        if (pageActive == 'menu') {
+            return
+        }
+        else {
+            removePage()
+            setTimeout(() => {
+                menuPageGenerator();
+                pageActive = 'menu'
+            }, 300)
+        }
 
-function homeButton() {
+    });
+
     const homeMenu = document.querySelector('.nav-logo');
-    homeMenu.addEventListener('click', homePageGenerator);
+    homeMenu.addEventListener('click', () =>{
+        if (pageActive == 'home') {
+            return
+        }
+        else {
+            removePage()
+            setTimeout(() => {
+                homePageGenerator();
+                pageActive = 'home'
+            }, 300)
+        }
+    });
 }
 
-// Testing a function to retract the current page visible
+startPage();
 
-function retractElement() {
-    const navContact = document.querySelector('.nav-contact');
-    navContact.addEventListener('click', removePage);
-}
 
-layoutGenerator();
-navigation();
-retractElement();
-homeButton();
