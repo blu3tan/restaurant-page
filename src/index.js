@@ -20,7 +20,7 @@ function startPage() {
             setTimeout(() => {
                 menuPageGenerator();
                 pageActive = 'menu'
-            }, 300)
+            }, 150)
         }
 
     });

@@ -126,8 +126,11 @@ div.nav:hover,
     overflow: hidden;
 }
 
-.kato-big {
-    scale: 1.3;
+.menuContainer.slide,
+.home-container.slide,
+.contactContainer.slide {
+    transform: translateX(0);
+    transition: transform 200ms ease-in-out;
 }
 
 /************************* Home page *************************/
@@ -140,12 +143,16 @@ div.nav:hover,
     transition: transform 200ms ease-in-out;
 }
 
+.kato-big {
+    scale: 1.3;
+}
+
 /************************* Contact page *************************/
 
 .contactContainer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
     position: absolute;
     transform: translateX(-100dvw);
     overflow: hidden;
@@ -155,6 +162,15 @@ div.nav:hover,
     border-radius: var(--border-radius);
     background-color: var(--page-color);
     transition: transform 200ms ease-in-out;
+}
+
+.contactContainer > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
 }
 
 /************************* Menu page *************************/
@@ -174,13 +190,6 @@ div.nav:hover,
     transition: transform 200ms ease-in-out;
 }
 
-.menuContainer.slide,
-.home-container.slide,
-.contactContainer.slide {
-    transform: translateX(0);
-    transition: transform 200ms ease-in-out;
-}
-
 .menuContainer > * {
     display: flex;
     justify-content: center;
@@ -193,7 +202,7 @@ div.nav:hover,
 }
 
 .menuContainer .menuItem:hover {
-        background-color: var(--page-color-highlight);
+    background-color: var(--page-color-highlight);
 }
 
 object.logoNigiri,

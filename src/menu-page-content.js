@@ -60,6 +60,6 @@ export function menuPageGenerator() {
     
     setTimeout(() => {
         menuContainer.classList.add('slide');
-    }, 100)
+    }, 50)
     
 }
