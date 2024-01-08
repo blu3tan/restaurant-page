@@ -9,6 +9,8 @@
     --nav: hsl(46, 88%, 57%);
     --nav-transparent: hsla(46, 88%, 57%, 0.75);
     --nav-highlight: #ffe942;
+    --page-color: hsla(50, 55%, 85%, 0.848);
+    --page-color-highlight: hsla(51, 95%, 84%, 0.919);
     --background: hsl(19, 91%, 50%);
 }
 
@@ -40,26 +42,6 @@ input, button, textarea, select {
 h2 {
     font-weight: 900;
     font-size: 2rem;
-}
-
-/************************* Animations *************************/
-
-@keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 /************************* UI and navigation layout *************************/
@@ -147,9 +129,6 @@ div.nav:hover,
 .kato-big {
     scale: 1.3;
 }
-.kato-big.fade {
-    animation: fade-out 0.3s forwards;
-}
 
 /************************* Home page *************************/
 
@@ -158,6 +137,23 @@ div.nav:hover,
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 200ms ease-in-out;
+}
+
+/************************* Contact page *************************/
+
+.contactContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: absolute;
+    transform: translateX(-100dvw);
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    border: var(--border-inside);
+    border-radius: var(--border-radius);
+    background-color: var(--page-color);
     transition: transform 200ms ease-in-out;
 }
 
@@ -174,12 +170,13 @@ div.nav:hover,
     height: 90%;
     border: var(--border-inside);
     border-radius: var(--border-radius);
-    background-color: var(--nav-transparent);
+    background-color: var(--page-color);
     transition: transform 200ms ease-in-out;
 }
 
 .menuContainer.slide,
-.home-container.slide {
+.home-container.slide,
+.contactContainer.slide {
     transform: translateX(0);
     transition: transform 200ms ease-in-out;
 }
@@ -196,7 +193,7 @@ div.nav:hover,
 }
 
 .menuContainer .menuItem:hover {
-        background-color: var(--nav-highlight);
+        background-color: var(--page-color-highlight);
 }
 
 object.logoNigiri,

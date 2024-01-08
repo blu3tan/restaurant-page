@@ -2,6 +2,7 @@ import { layoutGenerator } from "./layout-generator";
 import { menuPageGenerator } from "./menu-page-content";
 import { removePage } from "./remove-page";
 import { homePageGenerator } from "./home-page-content";
+import { contactPageGenerator } from "./contact-page-content";
 import "./main.css";
 
 let pageActive = 'home'
@@ -34,6 +35,20 @@ function startPage() {
             setTimeout(() => {
                 homePageGenerator();
                 pageActive = 'home'
+            }, 300)
+        }
+    });
+
+    const contactMenu = document.querySelector('.nav-contact');
+    contactMenu.addEventListener('click', () =>{
+        if (pageActive == 'contact') {
+            return
+        }
+        else {
+            removePage()
+            setTimeout(() => {
+                contactPageGenerator();
+                pageActive = 'contact'
             }, 300)
         }
     });
