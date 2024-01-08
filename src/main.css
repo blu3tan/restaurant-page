@@ -119,7 +119,7 @@ div.nav {
 
 object.katoAnimation {
     max-width: 100%;
-    /* padding-inline: 1rem; */
+    pointer-events: none;
 }
 object.boardAnimation {
     max-width: 90%;
@@ -145,7 +145,7 @@ div.nav:hover,
 }
 
 .kato-big {
-    scale: 1.2;
+    scale: 1.3;
 }
 .kato-big.fade {
     animation: fade-out 0.3s forwards;
@@ -154,9 +154,11 @@ div.nav:hover,
 /************************* Home page *************************/
 
 .home-container {
+    transform: translateX(-100dvw);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 200ms ease-in-out;
 }
 
 /************************* Menu page *************************/
@@ -173,12 +175,13 @@ div.nav:hover,
     border: var(--border-inside);
     border-radius: var(--border-radius);
     background-color: var(--nav-transparent);
-    transition: transform 300ms ease-in-out;
+    transition: transform 200ms ease-in-out;
 }
 
-.menuContainer.slide {
+.menuContainer.slide,
+.home-container.slide {
     transform: translateX(0);
-    transition: transform 300ms ease-in-out;
+    transition: transform 200ms ease-in-out;
 }
 
 .menuContainer > * {

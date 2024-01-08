@@ -38,7 +38,6 @@ export function menuPageGenerator() {
     menuRamen.textContent = 'RAMEN & NOODLES';
 
     const pageContent = document.querySelector('.page-content');
-    const katoBig = document.querySelector('.kato-big');
 
     const menuContainer = document.createElement('div');
     const menuItem1 = document.createElement('div');
@@ -57,16 +56,10 @@ export function menuPageGenerator() {
     menuItem4.append(logoRamen, menuRamen);
 
     menuContainer.append(menuItem1, menuItem2, menuItem3, menuItem4);
-
-    // katoBig.classList.add('fade');
-    // setTimeout(() => {
-    //     katoBig.style.display = 'none';
-    // }, 350)
-    setTimeout(() => {
-        pageContent.appendChild(menuContainer);
-    }, 400)
+    pageContent.appendChild(menuContainer);
+    
     setTimeout(() => {
         menuContainer.classList.add('slide');
-    }, 450)
+    }, 100)
     
 }

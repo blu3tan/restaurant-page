@@ -11,4 +11,8 @@ export function homePageGenerator() {
 
     homeContainer.append(katoBig);
     pageContent.appendChild(homeContainer);
+
+    setTimeout(() => {
+        homeContainer.classList.add('slide');
+    }, 100)
 }
