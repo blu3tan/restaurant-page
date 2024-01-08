@@ -58,10 +58,10 @@ export function menuPageGenerator() {
 
     menuContainer.append(menuItem1, menuItem2, menuItem3, menuItem4);
 
-    katoBig.classList.add('fade');
-    setTimeout(() => {
-        katoBig.style.display = 'none';
-    }, 350)
+    // katoBig.classList.add('fade');
+    // setTimeout(() => {
+    //     katoBig.style.display = 'none';
+    // }, 350)
     setTimeout(() => {
         pageContent.appendChild(menuContainer);
     }, 400)

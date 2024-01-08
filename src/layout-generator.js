@@ -1,4 +1,4 @@
-import katoBigImg from "./assets/kato-big.png";
+
 import boardSvg from "./assets/sushi-board-anim.svg";
 import katoSvg from "./assets/sushi-kato-anim.svg";
 
@@ -31,10 +31,6 @@ export function layoutGenerator() {
     board.data = boardSvg;
     board.classList.add('boardAnimation');
 
-    const katoBig = document.createElement('img');
-    katoBig.classList.add('kato-big');
-    katoBig.src = katoBigImg;
-
     const menuLink = document.createElement('h2');
     menuLink.textContent = 'MENU';
 
@@ -42,12 +38,10 @@ export function layoutGenerator() {
     contactLink.textContent = 'CONTACT';
 
     content.append(pageLayout);
-    pageLayout.appendChild(pageNav);
-    pageLayout.appendChild(pageContent);
+    pageLayout.append(pageNav, pageContent);
     pageNav.append(navLogo, navMenu, navContact, navHours);
     navLogo.appendChild(logo);
     navMenu.appendChild(menuLink);
     navContact.appendChild(contactLink);
     navHours.appendChild(board);
-    pageContent.appendChild(katoBig);
 }
