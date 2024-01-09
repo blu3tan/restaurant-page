@@ -4,6 +4,7 @@ import dango from './assets/dango.svg';
 export function contactPageGenerator() {
 
     const pageContent = document.querySelector('.page-content');
+    
     const manekiSvg = document.createElement('object');
     manekiSvg.type = 'image/svg+xml';
     manekiSvg.data = maneki;
@@ -37,12 +38,6 @@ export function contactPageGenerator() {
     meow.classList.add('meow');
     meow.textContent = 'CALL RIGHT MEOW!!';
 
-    const credits = document.createElement('a');
-    credits.classList.add('credits');
-    const creditsText = document.createTextNode("Itamae ;) Blu3");
-    credits.appendChild(creditsText);
-    credits.href = "https://github.com/blu3tan";
-
     const contactContainer = document.createElement('div');
     contactContainer.classList.add('contactContainer');
     const contactSectionUp = document.createElement('div');
@@ -52,7 +47,7 @@ export function contactPageGenerator() {
     const telephone = document.createElement('div');
     telephone.classList.add('telephone');
 
-    telephone.append(happy, hours, book, meow, credits);
+    telephone.append(happy, hours, book, meow,);
     contactSectionUp.append(manekiSvg, telephone, dangoSvg);
     contactSectionDown.append(restaurantName, address);
     contactContainer.append(contactSectionUp, contactSectionDown);

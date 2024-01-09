@@ -5,7 +5,6 @@
     --border-inside: solid 2.5px black;
     --border-radius: 1rem;
     --border-radius-inside: 0.75rem;
-    --text: black;
     --nav: hsl(46, 88%, 57%);
     --nav-transparent: hsla(46, 88%, 57%, 0.75);
     --nav-highlight: #ffe942;
@@ -48,7 +47,6 @@ h1 {
     font-weight:900;
     font-size: 5rem;
     transform: skewX(-10deg);
-    /* font-style: italic; */
 }
 
 /************************* UI and navigation layout *************************/
@@ -69,7 +67,6 @@ h1 {
     border: var(--border);
     border-radius: var(--border-radius);
     overflow: hidden;
-    background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 }
@@ -134,10 +131,11 @@ div.nav:hover,
 }
 
 .credits {
-    color: var(--background);
-    margin-top: 2rem;
-    font-size: 1.3rem;
+    position: absolute;
+    bottom: 10px;
     font-weight: 500;
+    color: var(--background);
+    color: #fff;
     text-decoration: none;
 }
 
@@ -223,6 +221,11 @@ div.nav:hover,
     font-weight: 500;
     margin-bottom: 0.5rem;
 }
+
+object.maneki,
+object.dango {
+    max-width: 90%;
+}
 /************************* Menu page *************************/
 
 .menuContainer {
@@ -281,3 +284,28 @@ object.logoRamen {
     border: var(--border-inside);
 }
 
+/************************* Queries **************************/
+/* Layout totally not responsive (not designed to be)
+    this query is just a basic font-size reduction just not
+    to totally break the design */
+
+@media (max-width: 1450px) {
+    .happy,
+    .meow {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .hours,
+    .book {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-weight:900;
+        font-size: 3rem;
+        transform: skewX(-10deg);
+    }
+}
