@@ -10,7 +10,7 @@
     --nav-transparent: hsla(46, 88%, 57%, 0.75);
     --nav-highlight: #ffe942;
     --page-color: hsla(50, 55%, 85%, 0.848);
-    --page-color-highlight: hsla(51, 95%, 84%, 0.919);
+    --page-color-highlight: hsla(51, 100%, 76%, 0.942);
     --background: hsl(19, 91%, 50%);
 }
 
@@ -42,6 +42,13 @@ input, button, textarea, select {
 h2 {
     font-weight: 900;
     font-size: 2rem;
+}
+
+h1 {
+    font-weight:900;
+    font-size: 5rem;
+    transform: skewX(-10deg);
+    /* font-style: italic; */
 }
 
 /************************* UI and navigation layout *************************/
@@ -152,27 +159,62 @@ div.nav:hover,
 .contactContainer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
     position: absolute;
     transform: translateX(-100dvw);
     overflow: hidden;
     width: 90%;
     height: 90%;
-    border: var(--border-inside);
+    padding-bottom: 1rem;
+    border: var(--border);
     border-radius: var(--border-radius);
     background-color: var(--page-color);
     transition: transform 200ms ease-in-out;
 }
 
-.contactContainer > * {
+.contactSectionDown {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    flex-direction: column;
     transition: all 0.2s ease-in-out;
     overflow: hidden;
 }
 
+.address {
+    font-size: 2rem;
+}
+
+.contactSectionUp {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-inline: 2rem;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    border-bottom: var(--border);
+}
+
+.telephone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.happy,
+.meow {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.hours,
+.book {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
 /************************* Menu page *************************/
 
 .menuContainer {

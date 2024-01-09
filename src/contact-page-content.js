@@ -1,4 +1,5 @@
 import maneki from './assets/maneki.svg';
+import dango from './assets/dango.svg';
 
 export function contactPageGenerator() {
 
@@ -8,15 +9,47 @@ export function contactPageGenerator() {
     manekiSvg.data = maneki;
     manekiSvg.classList.add('maneki');
 
-    const restaurantName = document.createElement('h2');
+    const dangoSvg = document.createElement('object');
+    dangoSvg.type = 'image/svg+xml';
+    dangoSvg.data = dango;
+    dangoSvg.classList.add('dango');
+
+    const restaurantName = document.createElement('h1');
     restaurantName.textContent = 'KATO SUSHI HOUSE';
 
+    const address = document.createElement('span');
+    address.classList.add('address');
+    address.textContent = 'Mina..meow..yama, Minato-ku, Tokyo';
+
+    const happy = document.createElement('span');
+    happy.classList.add('happy');
+    happy.textContent = 'SUNDAY HAPPY HOUR';
+
+    const hours = document.createElement('span');
+    hours.classList.add('hours');
+    hours.textContent = '6PM - 8PM';
+
+    const book = document.createElement('span');
+    book.classList.add('book');
+    book.textContent = 'BOOK 080-9L1V-M30W';
+
+    const meow = document.createElement('span');
+    meow.classList.add('meow');
+    meow.textContent = 'CALL RIGHT MEOW!!';
+
     const contactContainer = document.createElement('div');
-    // const contactSectionUp = document.createElement('div');
-    // const contactSectionDown = document.createElement('div');
-
     contactContainer.classList.add('contactContainer');
+    const contactSectionUp = document.createElement('div');
+    contactSectionUp.classList.add('contactSectionUp');
+    const contactSectionDown = document.createElement('div');
+    contactSectionDown.classList.add('contactSectionDown');
+    const telephone = document.createElement('div');
+    telephone.classList.add('telephone');
 
+    telephone.append(happy, hours, book, meow);
+    contactSectionUp.append(manekiSvg, telephone, dangoSvg);
+    contactSectionDown.append(restaurantName, address);
+    contactContainer.append(contactSectionUp, contactSectionDown);
     pageContent.appendChild(contactContainer);
     
     setTimeout(() => {
