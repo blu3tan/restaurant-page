@@ -133,6 +133,14 @@ div.nav:hover,
     overflow: hidden;
 }
 
+.credits {
+    color: var(--background);
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 .menuContainer.slide,
 .home-container.slide,
 .contactContainer.slide {
@@ -163,8 +171,8 @@ div.nav:hover,
     position: absolute;
     transform: translateX(-100dvw);
     overflow: hidden;
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
     padding-bottom: 1rem;
     border: var(--border);
     border-radius: var(--border-radius);
@@ -182,7 +190,7 @@ div.nav:hover,
 }
 
 .address {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .contactSectionUp {
@@ -224,8 +232,8 @@ div.nav:hover,
     position: absolute;
     transform: translateX(-100dvw);
     overflow: hidden;
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
     border: var(--border-inside);
     border-radius: var(--border-radius);
     background-color: var(--page-color);

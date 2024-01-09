@@ -37,7 +37,14 @@ export function layoutGenerator() {
     const contactLink = document.createElement('h2');
     contactLink.textContent = 'CONTACT';
 
+    // const credits = document.createElement('a');
+    // credits.classList.add('credits');
+    // const creditsText = document.createTextNode("Copyright 2024 © BLU3");
+    // credits.appendChild(creditsText);
+    // credits.href = "https://github.com/blu3tan";
+
     content.append(pageLayout);
+    // pageContent.appendChild(credits);
     pageLayout.append(pageNav, pageContent);
     pageNav.append(navLogo, navMenu, navContact, navHours);
     navLogo.appendChild(logo);
