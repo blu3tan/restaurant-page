@@ -38,6 +38,8 @@ The design is totally not responsive, i wanted to deliver this sassy look but ma
 
 The beautiful icons for the menu and contact page are from <a href="https://www.flaticon.com/free-icons/onigiri" title="onigiri icons">Japan icons created by Freepik - Flaticon</a>
 
+The background picture is a Photo by <a href="https://unsplash.com/@joshwilburne?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Josh Wilburne</a> on <a href="https://unsplash.com/photos/man-stainding-near-wall-hPeGDIGHnoI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
 The logo, hours board and all the animations are custom made for the project by myself.
 
 

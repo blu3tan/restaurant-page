@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "restaurant-page",
+		"cSpell.words": [
+			"kato"
+		],
+		"liveServer.settings.port": 5501
+	}
+}
