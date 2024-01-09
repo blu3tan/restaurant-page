@@ -2,7 +2,7 @@
 
 <div align="center">
 <a href="https://blu3tan.github.io/restaurant-page/">
-<img src=".src/assets/kato-sushi.gif">
+<img src="src/assets/kato-sushi.gif">
 </a>
 
 Game developed for the Odin Project Javascript curriculum
